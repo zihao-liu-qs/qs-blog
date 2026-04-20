@@ -1,0 +1,37 @@
+baseURL = 'https://example.com/'
+languageCode = 'zh-CN'
+title = '沉默的手稿'
+theme = 'minimal'
+
+[params]
+  subtitle    = "写作是思考的副产品"
+  author      = "Liu Zihao"
+  description = "个人主页，博客与软件作品"
+  avatar      = ""          # 可填头像图片路径，如 /images/avatar.jpg
+
+[menu]
+  [[menu.main]]
+    name   = "博客"
+    url    = "/blog/"
+    weight = 1
+  [[menu.main]]
+    name   = "软件"
+    url    = "/software/"
+    weight = 2
+  [[menu.main]]
+    name   = "关于"
+    url    = "/about/"
+    weight = 3
+
+[outputs]
+  home    = ["HTML", "RSS"]
+  section = ["HTML"]
+  term    = ["HTML"]
+  taxonomy = ["HTML"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos   = false
+  [markup.goldmark.renderer]
+    unsafe = true

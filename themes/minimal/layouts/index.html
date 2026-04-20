@@ -1,0 +1,61 @@
+{{ define "main" }}
+<div class="home">
+
+  {{/* ── Hero ── */}}
+  <section class="hero">
+    {{ with .Site.Params.avatar }}<img src="{{ . }}" alt="{{ $.Site.Params.author }}" class="avatar">{{ end }}
+    <h1 class="hero-name">{{ .Site.Params.author }}</h1>
+    <p class="hero-bio">{{ .Site.Params.subtitle }}</p>
+    <nav class="hero-links">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </section>
+
+  {{/* ── 精选软件 ── */}}
+  {{ $featured := where (where .Site.RegularPages "Section" "software") ".Params.featured" true }}
+  {{ if $featured }}
+  <section class="home-section">
+    <h2 class="section-label">软件</h2>
+    <div class="product-grid">
+      {{ range $featured }}
+      <a href="{{ .Permalink }}" class="product-card">
+        <div class="product-card-top">
+          <span class="product-name">{{ .Title }}</span>
+          {{ if eq .Params.status "coming-soon" }}
+          <span class="badge badge-soon">即将上线</span>
+          {{ else }}
+          <span class="product-price">{{ .Params.price }}</span>
+          {{ end }}
+        </div>
+        <p class="product-tagline">{{ .Params.tagline }}</p>
+        {{ with .Params.platform }}
+        <div class="product-platforms">{{ delimit . " · " }}</div>
+        {{ end }}
+      </a>
+      {{ end }}
+    </div>
+    <a href="{{ "/software/" | relURL }}" class="section-more">全部软件 →</a>
+  </section>
+  {{ end }}
+
+  {{/* ── 近期文章 ── */}}
+  {{ $posts := first 4 (where .Site.RegularPages "Section" "blog") }}
+  {{ if $posts }}
+  <section class="home-section">
+    <h2 class="section-label">近期文章</h2>
+    <ul class="post-list">
+      {{ range $posts }}
+      <li class="post-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+      </li>
+      {{ end }}
+    </ul>
+    <a href="{{ "/blog/" | relURL }}" class="section-more">全部文章 →</a>
+  </section>
+  {{ end }}
+
+</div>
+{{ end }}

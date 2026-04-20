@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article>
+  <header class="article-header">
+    <div class="product-header-meta">
+      {{ with .Params.platform }}
+      <span class="product-platforms">{{ delimit . " · " }}</span>
+      {{ end }}
+      {{ if eq .Params.status "coming-soon" }}
+      <span class="badge badge-soon">即将上线</span>
+      {{ end }}
+    </div>
+    <h1 class="article-title">{{ .Title }}</h1>
+    {{ with .Params.tagline }}<p class="product-hero-tagline">{{ . }}</p>{{ end }}
+
+    {{ if ne .Params.status "coming-soon" }}
+    <div class="buy-box">
+      <span class="buy-price">{{ .Params.price }}</span>
+      <a href="{{ .Params.buy_url | default "#" }}" class="buy-btn">购买</a>
+    </div>
+    {{ else }}
+    <div class="buy-box">
+      <span class="buy-coming">即将上线，敬请期待</span>
+    </div>
+    {{ end }}
+  </header>
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1 class="page-title">博客</h1>
+<ul class="post-list">
+  {{ range .Pages }}
+  <li class="post-item">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

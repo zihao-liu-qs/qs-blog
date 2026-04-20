@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1 class="page-title">软件</h1>
+<div class="product-grid product-grid--full">
+  {{ range .Pages }}
+  <a href="{{ .Permalink }}" class="product-card">
+    <div class="product-card-top">
+      <span class="product-name">{{ .Title }}</span>
+      {{ if eq .Params.status "coming-soon" }}
+      <span class="badge badge-soon">即将上线</span>
+      {{ else }}
+      <span class="product-price">{{ .Params.price }}</span>
+      {{ end }}
+    </div>
+    <p class="product-tagline">{{ .Params.tagline }}</p>
+    {{ with .Params.platform }}
+    <div class="product-platforms">{{ delimit . " · " }}</div>
+    {{ end }}
+  </a>
+  {{ end }}
+</div>
+{{ end }}

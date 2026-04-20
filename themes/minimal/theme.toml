@@ -1,0 +1,4 @@
+name = "minimal"
+license = "MIT"
+description = "极简文字流风格博客主题"
+min_version = "0.110.0"
