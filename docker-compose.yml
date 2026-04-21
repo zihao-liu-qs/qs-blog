@@ -7,10 +7,10 @@ services:
       dockerfile: Dockerfile
     container_name: qs-blog
     ports:
-      - "1313:80"
+      - "80:80"
     environment:
       - PORT=8080
-      - ADMIN_KEY=change-me-in-production
+      - ADMIN_KEY=aaacxxxjjjjjj12222...aaa
       - DB_PATH=/data/activate.db
       - LOG_PATH=/var/log/activity.log
       - LOG_MAX_AGE_DAYS=30
