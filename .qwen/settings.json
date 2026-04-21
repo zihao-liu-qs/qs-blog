@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir *)",
+      "Bash(docker build *)",
+      "Bash(cp *)",
+      "Bash(docker run *)",
+      "Bash(docker ps *)",
+      "Bash(docker stop *)",
+      "Bash(docker start *)"
+    ]
+  },
+  "$version": 3
+}

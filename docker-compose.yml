@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: qs-blog
+    ports:
+      - "1313:80"
+    environment:
+      - PORT=8080
+      - ADMIN_KEY=change-me-in-production
+      - DB_PATH=/data/activate.db
+      - LOG_PATH=/var/log/activity.log
+      - LOG_MAX_AGE_DAYS=30
+    volumes:
+      - blog-data:/data
+      - blog-logs:/var/log
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  blog-data:
+  blog-logs:

@@ -1,0 +1,37 @@
+# 依赖和构建文件
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Hugo
+.hugo_build.lock
+resources/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Nginx (保留配置文件)
+# nginx.conf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 公共目录(本地构建使用，Docker 构建时会重新生成)
+# public/
+
+# 旧服务器代码(忽略)
+# server/

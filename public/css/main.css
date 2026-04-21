@@ -517,9 +517,137 @@ a { color: inherit; }
   color: var(--fg-muted);
 }
 
+/* ===== Activate Page ===== */
+.activate-page {
+  padding: 40px 0;
+}
+
+.activate-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.activate-title {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.activate-subtitle {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--fg-muted);
+  margin: 0 0 36px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.activate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.form-input {
+  font-family: var(--mono);
+  font-size: 1rem;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--code-bg);
+  color: var(--fg);
+  transition: border-color 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-input::placeholder {
+  color: var(--fg-faint);
+  letter-spacing: normal;
+}
+
+.btn-submit {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  background: var(--accent);
+  color: var(--bg);
+  cursor: pointer;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+
+.btn-submit:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  padding: 12px 16px;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.message-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 680px) {
   html { font-size: 16px; }
+
+  .activate-container {
+    padding: 32px 20px;
+  }
+
+  .activate-title {
+    font-size: 1.5rem;
+  }
+
+  .activate-subtitle {
+    font-size: 0.88rem;
+  }
 
   .site-header { padding: 40px 0 32px; }
   .hero { padding: 40px 0 48px; }
