@@ -17,7 +17,8 @@
       "Bash(sleep *)",
       "Bash(ssh *)",
       "Bash(hugo *)",
-      "Bash(pkill *)"
+      "Bash(pkill *)",
+      "Bash(echo *)"
     ]
   },
   "$version": 3
