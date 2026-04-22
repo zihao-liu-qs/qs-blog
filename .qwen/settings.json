@@ -7,7 +7,17 @@
       "Bash(docker run *)",
       "Bash(docker ps *)",
       "Bash(docker stop *)",
-      "Bash(docker start *)"
+      "Bash(docker start *)",
+      "Bash(go *)",
+      "Bash(docker exec *)",
+      "Bash(curl *)",
+      "Bash(docker compose down)",
+      "Bash(docker compose build *)",
+      "Bash(docker compose up *)",
+      "Bash(sleep *)",
+      "Bash(ssh *)",
+      "Bash(hugo *)",
+      "Bash(pkill *)"
     ]
   },
   "$version": 3

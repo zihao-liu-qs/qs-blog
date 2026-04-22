@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - HUGO_BASE_URL=${BASE_URL:-http://localhost/}
     container_name: qs-blog
     ports:
       - "80:80"
@@ -14,6 +16,20 @@ services:
       - DB_PATH=/data/activate.db
       - LOG_PATH=/var/log/activity.log
       - LOG_MAX_AGE_DAYS=30
+      # Stripe 配置
+      - STRIPE_SECRET_KEY=sk_test_xxx  # 替换为你的 Stripe Secret Key
+      - STRIPE_PUBLISHABLE_KEY=pk_test_xxx  # 替换为你的 Stripe Publishable Key
+      - STRIPE_WEBHOOK_SECRET=whsec_xxx  # 替换为你的 Stripe Webhook Secret
+      # 邮件配置
+      - SMTP_HOST=smtp.example.com
+      - SMTP_PORT=587
+      - SMTP_USER=your_email@example.com
+      - SMTP_PASSWORD=your_smtp_password
+      - FROM_EMAIL=your_email@example.com
+      - FROM_NAME=QS Blog
+      # 基础 URL
+      # - BASE_URL=http://142.93.127.127
+      - BASE_URL=http://localhost
     volumes:
       - blog-data:/data
       - blog-logs:/var/log

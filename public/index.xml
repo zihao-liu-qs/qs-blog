@@ -1,53 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>主页 on 沉默的手稿</title>
-    <link>https://example.com/</link>
-    <description>Recent content in 主页 on 沉默的手稿</description>
+    <title>主页 on </title>
+    <link>http://142.93.127.127/</link>
+    <description>Recent content in 主页 on </description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://142.93.127.127/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blink — 专注计时器</title>
-      <link>https://example.com/software/blink/</link>
+      <title>Blink</title>
+      <link>http://142.93.127.127/software/blink/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/software/blink/</guid>
+      <guid>http://142.93.127.127/software/blink/</guid>
       <description>&lt;p&gt;Blink 是一款运行在菜单栏的极简番茄钟。没有花哨的统计图表，没有社交功能——只有一个计时器，和你的工作。&lt;/p&gt;&#xA;&lt;h2 id=&#34;功能&#34;&gt;功能&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;菜单栏驻留，随时开始/暂停&lt;/li&gt;&#xA;&lt;li&gt;自定义工作时长与休息时长&lt;/li&gt;&#xA;&lt;li&gt;专注结束后系统通知&lt;/li&gt;&#xA;&lt;li&gt;支持键盘快捷键全程操控&lt;/li&gt;&#xA;&lt;li&gt;深色 / 浅色模式自动跟随系统&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;系统要求&#34;&gt;系统要求&lt;/h2&gt;&#xA;&lt;p&gt;macOS 13 Ventura 及以上&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于极简：去掉什么，留下什么</title>
-      <link>https://example.com/blog/on-minimalism/</link>
+      <link>http://142.93.127.127/blog/on-minimalism/</link>
       <pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/blog/on-minimalism/</guid>
+      <guid>http://142.93.127.127/blog/on-minimalism/</guid>
       <description>&lt;p&gt;极简主义很容易被理解成一种审美：白墙，空桌子，没有装饰。这不算错，但如果只停在这里，它就变成了另一种风格消费——用&amp;quot;没有东西&amp;quot;来炫耀，和用&amp;quot;很多东西&amp;quot;来炫耀，其实没有本质区别。&lt;/p&gt;&#xA;&lt;p&gt;我理解的极简，是一个关于&lt;strong&gt;代价&lt;/strong&gt;的问题。&lt;/p&gt;&#xA;&lt;h2 id=&#34;每样东西都有代价&#34;&gt;每样东西都有代价&lt;/h2&gt;&#xA;&lt;p&gt;买一件东西，代价不只是钱，还有存放它的空间、维护它的时间、拥有它之后产生的依恋。&lt;/p&gt;&#xA;&lt;p&gt;订阅一个服务，代价不只是月费，还有它在你注意力上占据的位置——哪怕你已经很久没用它，它还在后台以某种方式存在于你的生活里。&lt;/p&gt;&#xA;&lt;p&gt;加入一个群组，代价不只是时间，还有它带来的隐形期待：你应该回复消息，你应该参与讨论，你应该保持在线。&lt;/p&gt;&#xA;&lt;p&gt;极简不是拒绝拥有，而是&lt;strong&gt;在拥有之前，想清楚代价是什么，值不值&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;减法思维&#34;&gt;减法思维&lt;/h2&gt;&#xA;&lt;p&gt;加法很容易，减法很难。加一个功能、多一个会议、新建一个文档，这些事的门槛极低。但每次加法都会悄悄提高维护成本，而这个成本往往是分散的、隐性的，直到有一天你发现整个系统变得沉重而脆弱。&lt;/p&gt;&#xA;&lt;p&gt;我在写代码的时候越来越喜欢问一个问题：这段代码如果不写，会怎样？大部分情况下，答案是&amp;quot;也还好&amp;quot;。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;完美不是没有什么可以再加，而是没有什么可以再减。&lt;/p&gt;&#xA;&lt;p&gt;—— 圣埃克苏佩里&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;留下什么&#34;&gt;留下什么&lt;/h2&gt;&#xA;&lt;p&gt;去掉东西只是手段，真正的问题是：你在为什么腾出空间？&lt;/p&gt;&#xA;&lt;p&gt;这个问题没有通用答案。有人想要更多时间陪家人，有人想要清醒的大脑去思考，有人只是想要一个不让人焦虑的早晨。&lt;/p&gt;&#xA;&lt;p&gt;我发现自己想要的，是&lt;strong&gt;一种不被打断的状态&lt;/strong&gt;——做一件事的时候，不必惦记另一件事。这听起来简单，但要真正实现，需要主动减掉很多&amp;quot;以防万一&amp;quot;的选项。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;极简不是一个目标，而是一个持续的问题：现在这些，哪些真的重要？&lt;/p&gt;</description>
     </item>
     <item>
       <title>写作与思考的关系</title>
-      <link>https://example.com/blog/writing-and-thinking/</link>
+      <link>http://142.93.127.127/blog/writing-and-thinking/</link>
       <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/blog/writing-and-thinking/</guid>
+      <guid>http://142.93.127.127/blog/writing-and-thinking/</guid>
       <description>&lt;p&gt;费曼有一个习惯：把想弄懂的概念写下来，用最简单的语言解释，直到写不下去为止。写不下去的地方，就是他还没真正理解的地方。&lt;/p&gt;&#xA;&lt;p&gt;这个方法被后人整理成&amp;quot;费曼技巧&amp;quot;，但我觉得它的核心其实很朴素：&lt;strong&gt;写作是一种严苛的测试&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;思考的幻觉&#34;&gt;思考的幻觉&lt;/h2&gt;&#xA;&lt;p&gt;我们在脑子里&amp;quot;想&amp;quot;一件事的时候，很容易产生一种理解的幻觉。思路看起来流畅，逻辑好像连贯，结论似乎自然而然就到了。但一旦要把它写出来，就会发现有个地方跳过去了，有个概念模糊了，有个&amp;quot;因此&amp;quot;其实并不成立。&lt;/p&gt;&#xA;&lt;p&gt;这不是语言表达的问题，而是思维本身的问题。&lt;/p&gt;&#xA;&lt;p&gt;写作迫使你把内部的模糊状态具体化。词语是有边界的，句子是有结构的，段落是有逻辑的。你必须做出选择，而选择会暴露你的判断。&lt;/p&gt;&#xA;&lt;h2 id=&#34;不是记录而是生产&#34;&gt;不是记录，而是生产&lt;/h2&gt;&#xA;&lt;p&gt;有一种常见的误解：写作是把脑子里已有的想法记录下来。&lt;/p&gt;&#xA;&lt;p&gt;但更多时候，想法是在写作的过程中才出现的。你打下第一句话，第二句话才变得可能；第一段写完，你才知道下一段应该去哪里。写作不是思考的下游，它参与了思考本身。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 这段代码的注释写得比代码本身花了更长时间&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 因为要把&amp;#34;为什么这样写&amp;#34;解释清楚，&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 才发现自己对&amp;#34;为什么&amp;#34;的理解并不充分。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;process&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;byte&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// ...&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;程序员应该对这种体验很熟悉：给代码写注释的时候，才发现代码本身有问题。&lt;/p&gt;&#xA;&lt;h2 id=&#34;写给未来的自己&#34;&gt;写给未来的自己&lt;/h2&gt;&#xA;&lt;p&gt;还有一个我慢慢意识到的用处：写下来的东西是可以检验的。&lt;/p&gt;&#xA;&lt;p&gt;三个月后翻出这篇文章，你会知道当时的自己在想什么，相信什么，错在哪里。没有写下来的想法会被记忆悄悄篡改——我们总是倾向于记住&amp;quot;后来证明是对的&amp;quot;那个版本的自己。&lt;/p&gt;&#xA;&lt;p&gt;写作留住的，是那个还不确定的、正在摸索的自己。那才是真实发生过的事。&lt;/p&gt;</description>
     </item>
     <item>
       <title>你好，世界</title>
-      <link>https://example.com/blog/hello-world/</link>
+      <link>http://142.93.127.127/blog/hello-world/</link>
       <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/blog/hello-world/</guid>
+      <guid>http://142.93.127.127/blog/hello-world/</guid>
       <description>&lt;p&gt;这是第一篇文章，写给正在读这段文字的你，也写给一年后再翻到这里的自己。&lt;/p&gt;&#xA;&lt;p&gt;开一个博客是件奇怪的事。你不知道会有没有人读，不知道会不会坚持，甚至不确定自己到底想说什么。但还是开始了——这件事本身就已经足够有意义。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么写作&#34;&gt;为什么写作&lt;/h2&gt;&#xA;&lt;p&gt;我不是天生的写作者。学生时代的作文总是凑字数，工作后的文档总是对着模板填空。写作对我来说更像是一种义务，而不是表达。&lt;/p&gt;&#xA;&lt;p&gt;直到有一天，我开始记录思考的片段：读书时的困惑、工作中的顿悟、深夜想起来的问题。写着写着才发现，写作不是记录思考的结果，而是思考本身。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;你没想清楚的事，写出来之后才会发现没想清楚。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;这句话我在某本书里读到过，现在已经忘了出处，但它一直留着。&lt;/p&gt;&#xA;&lt;h2 id=&#34;这里会写什么&#34;&gt;这里会写什么&lt;/h2&gt;&#xA;&lt;p&gt;没有明确的主题。技术、阅读、生活里的细节，都可能出现。我不想给自己设一个专栏的框架，这里更像一个笔记本——不整齐，但真实。&lt;/p&gt;&#xA;&lt;p&gt;如果你碰巧读到了什么有用的东西，那很好。如果没有，也没关系。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;先写这些。下次见。&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于</title>
-      <link>https://example.com/about/</link>
+      <link>http://142.93.127.127/about/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/about/</guid>
+      <guid>http://142.93.127.127/about/</guid>
       <description>&lt;p&gt;你好。我叫刘子豪，是一个写代码的人，偶尔也写字。&lt;/p&gt;&#xA;&lt;p&gt;在某个互联网公司做后端开发，用 Go。喜欢读书，读得杂，技术、历史、哲学都碰，通常是被某本书里的一句话带到另一本书里去的那种读法。&lt;/p&gt;&#xA;&lt;p&gt;这个博客没有明确的主题。它更像是一个思考的副产品——把脑子里转来转去的东西写下来，让它们从模糊变得具体一点。如果你在这里找到了什么有用的东西，那很好；如果只是路过，也欢迎。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;联系方式&#34;&gt;联系方式&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Email：&lt;a href=&#34;mailto:your@email.com&#34;&gt;your@email.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;GitHub：&lt;a href=&#34;https://github.com/yourname&#34;&gt;github.com/yourname&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;我不常查邮件，但如果你写了，我会回。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>激活验证</title>
-      <link>https://example.com/activate/</link>
+      <title>支付成功</title>
+      <link>http://142.93.127.127/payment-success/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/activate/</guid>
+      <guid>http://142.93.127.127/payment-success/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>激活验证</title>
+      <link>http://142.93.127.127/activate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://142.93.127.127/activate/</guid>
       <description></description>
     </item>
   </channel>

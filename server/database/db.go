@@ -19,7 +19,7 @@ func Init(dbPath string) error {
 	if err != nil {
 		return err
 	}
-	if err := db.AutoMigrate(&models.License{}, &models.DeviceBinding{}); err != nil {
+	if err := db.AutoMigrate(&models.License{}, &models.DeviceBinding{}, &models.Order{}); err != nil {
 		return err
 	}
 	DB = db

@@ -10,6 +10,7 @@ import (
 	"github.com/zihao-liu-qs/qs-blog/server/database"
 	"github.com/zihao-liu-qs/qs-blog/server/handlers"
 	"github.com/zihao-liu-qs/qs-blog/server/middleware"
+	"github.com/zihao-liu-qs/qs-blog/server/services"
 )
 
 func main() {
@@ -17,6 +18,18 @@ func main() {
 
 	if err := database.Init(cfg.DBPath); err != nil {
 		log.Fatalf("failed to init database: %v", err)
+	}
+
+	// 初始化邮件服务
+	if cfg.SMTPHost != "" {
+		services.InitEmail(&services.EmailConfig{
+			SMTPHost:     cfg.SMTPHost,
+			SMTPPort:     cfg.SMTPPort,
+			SMTPUser:     cfg.SMTPUser,
+			SMTPPassword: cfg.SMTPPassword,
+			FromEmail:    cfg.FromEmail,
+			FromName:     cfg.FromName,
+		})
 	}
 
 	// 确保日志目录存在
@@ -38,6 +51,23 @@ func main() {
 	api := r.Group("/api/v1", middleware.RateLimit(rateLimiter))
 	{
 		api.POST("/activate", handlers.VerifyWithLogger(activityLogger))
+	}
+
+	// 支付相关接口
+	if cfg.StripeKey != "" {
+		payment := r.Group("/api/v1", middleware.InjectStripeKey(cfg.StripeKey))
+		{
+			payment.POST("/checkout", handlers.CreateCheckout)
+		}
+
+		// Webhook（不需要限流，但需要签名验证）
+		webhook := r.Group("/api/v1",
+			middleware.InjectStripeKey(cfg.StripeKey),
+			middleware.InjectStripeWebhookSecret(cfg.StripeWebhookSecret),
+		)
+		{
+			webhook.POST("/webhook/stripe", handlers.StripeWebhook)
+		}
 	}
 
 	// 管理接口（需要 X-Admin-Key）

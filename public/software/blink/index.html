@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blink — 专注计时器 · 沉默的手稿</title>
+<title>Blink · </title>
 <meta name="description" content="个人主页，博客与软件作品">
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="../../css/main.css">
 
 </head>
 <body>
   <div class="site-wrap">
     <header class="site-header">
-  <p class="site-name"><a href="/">沉默的手稿</a></p>
+  <p class="site-name"><a href="../../">liuzihao</a></p>
   <nav class="site-nav">
-    <a href="/blog/">博客</a><a href="/software/">软件</a><a href="/about/">关于</a>
+    <a href="../../blog/">博客</a><a href="../../software/">软件</a><a href="../../about/">关于</a>
   </nav>
 </header>
 
@@ -27,13 +27,20 @@
       
       
     </div>
-    <h1 class="article-title">Blink — 专注计时器</h1>
+    <h1 class="article-title">Blink</h1>
     <p class="product-hero-tagline">用最少的干扰，完成最深的专注</p>
 
     
     <div class="buy-box">
       <span class="buy-price">¥68</span>
-      <a href="#" class="buy-btn">购买</a>
+      
+      <button class="buy-btn" id="buy-btn"
+        data-product-id="blink"
+        data-product-name="Blink"
+        data-price="¥68">
+        购买
+      </button>
+      
     </div>
     
   </header>
@@ -54,9 +61,78 @@
   </div>
 </article>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const buyBtn = document.getElementById('buy-btn');
+  if (!buyBtn) {
+    console.warn('buy-btn not found');
+    return;
+  }
+
+  const priceStr = buyBtn.dataset.price || '';
+  let priceCents = 0;
+  const match = priceStr.match(/[\d.]+/);
+  if (match) {
+    priceCents = Math.round(parseFloat(match[0]) * 100);
+  }
+  console.log('Product:', buyBtn.dataset.productId, 'Price:', priceStr, '->', priceCents, 'cents');
+
+  buyBtn.addEventListener('click', async function(e) {
+    e.preventDefault();
+
+    const email = prompt('请输入您的邮箱，我们将发送 License Key 到您的邮箱：');
+    if (!email) return;
+
+    const originalText = buyBtn.textContent;
+    buyBtn.textContent = '正在跳转...';
+    buyBtn.disabled = true;
+
+    const payload = {
+      product_id: buyBtn.dataset.productId,
+      product_name: buyBtn.dataset.productName,
+      product_price: priceCents,
+      customer_email: email,
+      success_url: window.location.origin + '/payment-success',
+      cancel_url: window.location.href,
+      currency: 'cny'
+    };
+    console.log('Sending checkout request:', payload);
+
+    try {
+      const resp = await fetch('/api/v1/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      console.log('Response status:', resp.status);
+      const data = await resp.json();
+      console.log('Response data:', data);
+
+      if (!resp.ok) {
+        throw new Error(data.error || 'server error');
+      }
+
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error('no checkout url');
+      }
+    } catch (err) {
+      console.error('Checkout error:', err);
+      alert('创建支付失败: ' + err.message);
+      buyBtn.textContent = originalText;
+      buyBtn.disabled = false;
+    }
+  });
+});
+</script>
+
+
     </main>
     <footer class="site-footer">
-  <p>© 2026 Liu Zihao &middot; <a href="/index.xml">RSS</a></p>
+  <p>© 2026 Liu Zihao &middot; <a href="../../index.xml">RSS</a></p>
 </footer>
 
   </div>

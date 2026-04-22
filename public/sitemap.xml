@@ -2,34 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/software/blink/</loc>
+    <loc>http://142.93.127.127/software/blink/</loc>
     <lastmod>2024-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/software/</loc>
+    <loc>http://142.93.127.127/software/</loc>
     <lastmod>2024-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/</loc>
+    <loc>http://142.93.127.127/</loc>
     <lastmod>2024-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/blog/</loc>
+    <loc>http://142.93.127.127/blog/</loc>
     <lastmod>2024-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/blog/on-minimalism/</loc>
+    <loc>http://142.93.127.127/blog/on-minimalism/</loc>
     <lastmod>2024-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/blog/writing-and-thinking/</loc>
+    <loc>http://142.93.127.127/blog/writing-and-thinking/</loc>
     <lastmod>2024-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/blog/hello-world/</loc>
+    <loc>http://142.93.127.127/blog/hello-world/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/about/</loc>
+    <loc>http://142.93.127.127/about/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/</loc>
+    <loc>http://142.93.127.127/categories/</loc>
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>http://142.93.127.127/tags/</loc>
   </url><url>
-    <loc>https://example.com/activate/</loc>
+    <loc>http://142.93.127.127/payment-success/</loc>
+  </url><url>
+    <loc>http://142.93.127.127/activate/</loc>
   </url>
 </urlset>

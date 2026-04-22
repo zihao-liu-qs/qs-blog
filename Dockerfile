@@ -3,6 +3,8 @@
 # ====================================
 FROM hugomods/hugo:0.143.0 AS hugo-builder
 
+ARG HUGO_BASE_URL=http://localhost/
+
 WORKDIR /app
 
 # 复制所有文件（排除 server 目录）
@@ -10,7 +12,7 @@ COPY . .
 RUN rm -rf /app/server
 
 # 强制重新构建站点
-RUN hugo --minify --gc --forceSyncStatic
+RUN hugo --baseURL="${HUGO_BASE_URL}" --minify --gc --forceSyncStatic
 
 # ====================================
 # 阶段 2: 构建 Go 后端服务

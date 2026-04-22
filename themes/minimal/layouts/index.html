@@ -1,18 +1,6 @@
 {{ define "main" }}
 <div class="home">
 
-  {{/* ── Hero ── */}}
-  <section class="hero">
-    {{ with .Site.Params.avatar }}<img src="{{ . }}" alt="{{ $.Site.Params.author }}" class="avatar">{{ end }}
-    <h1 class="hero-name">{{ .Site.Params.author }}</h1>
-    <p class="hero-bio">{{ .Site.Params.subtitle }}</p>
-    <nav class="hero-links">
-      {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
-    </nav>
-  </section>
-
   {{/* ── 精选软件 ── */}}
   {{ $featured := where (where .Site.RegularPages "Section" "software") ".Params.featured" true }}
   {{ if $featured }}

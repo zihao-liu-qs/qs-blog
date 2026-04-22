@@ -15,7 +15,16 @@
     {{ if ne .Params.status "coming-soon" }}
     <div class="buy-box">
       <span class="buy-price">{{ .Params.price }}</span>
-      <a href="{{ .Params.buy_url | default "#" }}" class="buy-btn">购买</a>
+      {{ if .Params.buy_url }}
+      <a href="{{ .Params.buy_url }}" class="buy-btn">购买</a>
+      {{ else }}
+      <button class="buy-btn" id="buy-btn"
+        data-product-id="{{ .Params.product_id | default "product" }}"
+        data-product-name="{{ .Title }}"
+        data-price="{{ .Params.price }}">
+        购买
+      </button>
+      {{ end }}
     </div>
     {{ else }}
     <div class="buy-box">
@@ -28,4 +37,73 @@
     {{ .Content }}
   </div>
 </article>
+
+{{ if ne .Params.status "coming-soon" }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const buyBtn = document.getElementById('buy-btn');
+  if (!buyBtn) {
+    console.warn('buy-btn not found');
+    return;
+  }
+
+  const priceStr = buyBtn.dataset.price || '';
+  let priceCents = 0;
+  const match = priceStr.match(/[\d.]+/);
+  if (match) {
+    priceCents = Math.round(parseFloat(match[0]) * 100);
+  }
+  console.log('Product:', buyBtn.dataset.productId, 'Price:', priceStr, '->', priceCents, 'cents');
+
+  buyBtn.addEventListener('click', async function(e) {
+    e.preventDefault();
+
+    const email = prompt('请输入您的邮箱，我们将发送 License Key 到您的邮箱：');
+    if (!email) return;
+
+    const originalText = buyBtn.textContent;
+    buyBtn.textContent = '正在跳转...';
+    buyBtn.disabled = true;
+
+    const payload = {
+      product_id: buyBtn.dataset.productId,
+      product_name: buyBtn.dataset.productName,
+      product_price: priceCents,
+      customer_email: email,
+      success_url: window.location.origin + '/payment-success',
+      cancel_url: window.location.href,
+      currency: 'cny'
+    };
+    console.log('Sending checkout request:', payload);
+
+    try {
+      const resp = await fetch('/api/v1/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      console.log('Response status:', resp.status);
+      const data = await resp.json();
+      console.log('Response data:', data);
+
+      if (!resp.ok) {
+        throw new Error(data.error || 'server error');
+      }
+
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error('no checkout url');
+      }
+    } catch (err) {
+      console.error('Checkout error:', err);
+      alert('创建支付失败: ' + err.message);
+      buyBtn.textContent = originalText;
+      buyBtn.disabled = false;
+    }
+  });
+});
+</script>
+{{ end }}
 {{ end }}

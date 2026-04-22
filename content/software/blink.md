@@ -1,5 +1,5 @@
 ---
-title: "Blink — 专注计时器"
+title: "Blink"
 date: 2024-06-01
 draft: false
 tagline: "用最少的干扰，完成最深的专注"
@@ -7,7 +7,7 @@ price: "¥68"
 featured: true
 platform: ["macOS"]
 status: "available"
-buy_url: "#"
+product_id: "blink"
 ---
 
 Blink 是一款运行在菜单栏的极简番茄钟。没有花哨的统计图表，没有社交功能——只有一个计时器，和你的工作。
