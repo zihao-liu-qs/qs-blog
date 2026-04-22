@@ -49,7 +49,7 @@ COPY --from=hugo-builder /app/public /usr/share/nginx/html
 COPY --from=go-builder /build/server /usr/local/bin/server
 
 # 创建数据和日志目录
-RUN mkdir -p /data /var/log
+RUN mkdir -p /data /var/log /var/log/nginx /var/lib/nginx/logs /run
 
 # 复制启动脚本
 RUN cat > /start.sh << 'EOF'
